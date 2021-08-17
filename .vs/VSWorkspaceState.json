@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Middleware",
+    "\\config",
+    "\\resources",
+    "\\resources\\js",
+    "\\resources\\js\\Components",
+    "\\resources\\js\\Layout",
+    "\\resources\\js\\Pages",
+    "\\resources\\js\\Pages\\Client"
+  ],
+  "SelectedNode": "\\resources\\js\\Pages\\Client\\PaymentShow.vue",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,47 @@
+<a-scene
+    xrextras-gesture-detector
+    xrextras-almost-there
+    xrextras-loading
+    xrextras-runtime-error
+    renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;"
+    xrweb>
+    <a-assets>
+        <a-asset-item id="%%id%%Model" src="%%model_url%%"></a-asset-item>
+    </a-assets>
+    <a-camera
+        id="camera"
+        position="%%camera_position_x%% %%camera_position_y%% %%camera_position_z%%"
+        raycaster="objects: .cantap"
+        cursor="fuse: false; rayOrigin: mouse;">
+    </a-camera>
+    <a-entity
+        light="type: directional;
+            intensity: 2.5;
+            castShadow: true;
+            shadowMapHeight:2048;
+            shadowMapWidth:2048;
+            shadowCameraTop: 10;
+            target: #%%id%%;"
+        xrextras-attach="target: %%id%%; offset: 3 15 3;"
+        shadow>
+    </a-entity>
+    <a-light type="ambient" intensity="0.65"></a-light>
+    <a-entity
+        id="%%id%%"
+        gltf-model="#%%id%%Model"
+        xrextras-hold-drag
+        xrextras-two-finger-rotate
+        xrextras-pinch-scale
+        scale="%%entity_scale_x%% %%entity_scale_y%% %%entity_scale_z%%"
+        shadow="cast: true; receive: false;">
+    </a-entity>
+    <a-entity
+        id="ground"
+        class="cantap"
+        geometry="primitive: box"
+        material="shader: shadow; transparent: true; opacity: 0.4"
+        scale="1000 2 1000"
+        position="0 -1 0"
+        shadow="cast: false">
+    </a-entity>
+</a-scene>
