@@ -18,13 +18,13 @@
             </div>
         </div>
         <template v-for="(page, idx) in pages">
-            <div v-if="page.id in scenePages && isAr" :class="{glow: shownClass['ar-' + page.id], 'fill-width': !shownClass['ar-' + page.id]}" class="w-100 glow-animation" :key="'img-' + idx" :id="'ar-' + page.id">
+            <div v-if="page.id in scenePages && isAr" :class="{glow: shownClass['ar-' + page.id], 'fill-width': !shownClass['ar-' + page.id]}" class="w-100 glow-animation lg:object-fill" :key="'img-' + idx" :id="'ar-' + page.id">
                 <router-link :to="{name: 'sceneShow', params: {pageId: page.id}}">
                     <img :src="page.image_url">
                 </router-link>
             </div>
-            <div v-else :key="'img-' + idx">
-                <img :src="page.image_url">
+            <div v-else class="lg:object-fill" :key="'img-' + idx">
+                <img class="lg:object-fill" :src="page.image_url">
             </div>
         </template>
         <!-- <div :class="{glow: shownClass['ar-' + page.id], 'fill-width': !shownClass['ar-' + page.id]}" class="w-100 glow-animation" v-for="(page, idx) in pages" :key="'img-' + idx" :id="page.id in scenePages ? 'ar-' + page.id : null">

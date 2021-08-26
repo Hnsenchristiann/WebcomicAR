@@ -30,7 +30,7 @@
                 <div class="flex-none w-1/5">
                     <img class="h-20" :src="preview.image_url" alt="">
                 </div>
-                <div class="flex-grow flex flex-col p-3 w-2/5" @click="goToChapter(preview.chapter)">
+                <div class="flex-grow flex flex-col p-3 w-2/5 lg:w-2" @click="goToChapter(preview.chapter)">
                     <div>Ep. {{preview.chapter}}</div>
                     <div class="flex flex-row w-100">
                         <div class="mr-2">
@@ -41,7 +41,7 @@
                         <div class="text-xs">{{preview.release_date}}</div>
                     </div>
                 </div>
-                <div class="w-2/5 flex justify-center items-center" >
+                <div class="w-2/5 flex justify-center items-center  lg:justify-end lg:items-end" >
                     <button v-if="!$_.includes(purchaseObj.chapters, preview.chapter)" class="text-xs items-center min-h-8 w-116  p-2 rounded-lg text-gray-50 bg-green-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="openModal(preview.chapter)">Buy Ep. {{preview.chapter}}</button>
                     <template v-else>
                         <button class="text-xs items-center h-auto w-116  p-2 rounded-lg text-gray-50 bg-green-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="goToChapter(preview.chapter, true)">Read Ep. {{preview.chapter}} With AR</button>
@@ -52,7 +52,7 @@
         </div>
         <div class="p-5 text-white">
             <div class="mb-5">
-                Comments:
+                Comments :
             </div>
             <div class="flex flex-row mb-4 comment-container" v-for="(comment, idx) in comments" :key="'comm' + idx">
                 <div class="comment-profile rounded-xl border border-gray-100">

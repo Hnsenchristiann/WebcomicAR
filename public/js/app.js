@@ -3720,6 +3720,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'payment-page',
@@ -26195,25 +26204,29 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", [
         _c("div", [
-          _c("div", { staticClass: "flex mt-7 ml-20" }, [
-            _c("div", [
-              _c("img", {
-                staticClass: "w-24 h-24 rounded-full",
-                attrs: { src: "/storage/media/covers/kara.jpg" }
-              }),
+          _c(
+            "div",
+            { staticClass: "flex mt-7 ml-20 lg:object-center lg:px-96" },
+            [
+              _c("div", [
+                _c("img", {
+                  staticClass: "w-24 h-24 rounded-full",
+                  attrs: { src: "/storage/media/covers/kara.jpg" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-3" }, [_vm._v("CEO Of Visi8")])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mt-3" }, [_vm._v("CEO Of Visi8")])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-7" }, [
-              _c("img", {
-                staticClass: "w-24 h-24 rounded-full",
-                attrs: { src: "/storage/media/covers/kara.jpg" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-3" }, [_vm._v("CO-FOUNDER")])
-            ])
-          ]),
+              _c("div", { staticClass: "ml-7" }, [
+                _c("img", {
+                  staticClass: "w-24 h-24 rounded-full",
+                  attrs: { src: "/storage/media/covers/kara.jpg" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-3" }, [_vm._v("CO-FOUNDER")])
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "p-3 text-center" }, [
             _vm._v(
@@ -26231,16 +26244,24 @@ var staticRenderFns = [
         _c("div", { staticClass: "mb-7" }, [
           _c(
             "div",
-            { staticClass: "grid grid-cols-3 divide-x divide-green-500" },
+            {
+              staticClass: "grid grid-cols-3 divide-x divide-green-500 lg:mt-10"
+            },
             [
-              _c("div", { staticClass: "ml-5" }, [_vm._v("AR and 3D Design")]),
-              _vm._v(" "),
-              _c("div", [
-                _c("div", { staticClass: "ml-10" }, [_vm._v("WEB and APPS")])
+              _c("div", { staticClass: "ml-5 lg:ml-52" }, [
+                _vm._v("AR and 3D Design")
               ]),
               _vm._v(" "),
               _c("div", [
-                _c("div", { staticClass: "ml-7" }, [_vm._v("Animation Movie")])
+                _c("div", { staticClass: "ml-10 lg:ml-52" }, [
+                  _vm._v("Web and Apps")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", { staticClass: "ml-7 lg:ml-52" }, [
+                  _vm._v("Animation Movie")
+                ])
               ])
             ]
           )
@@ -26633,7 +26654,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "flex-grow flex flex-col p-3 w-2/5",
+                  staticClass: "flex-grow flex flex-col p-3 w-2/5 lg:w-2",
                   on: {
                     click: function($event) {
                       return _vm.goToChapter(preview.chapter)
@@ -26679,7 +26700,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "w-2/5 flex justify-center items-center" },
+                {
+                  staticClass:
+                    "w-2/5 flex justify-center items-center  lg:justify-end lg:items-end"
+                },
                 [
                   !_vm.$_.includes(_vm.purchaseObj.chapters, preview.chapter)
                     ? _c(
@@ -26728,7 +26752,7 @@ var render = function() {
         { staticClass: "p-5 text-white" },
         [
           _c("div", { staticClass: "mb-5" }, [
-            _vm._v("\n            Comments:\n        ")
+            _vm._v("\n            Comments :\n        ")
           ]),
           _vm._v(" "),
           _vm._l(_vm.comments, function(comment, idx) {
@@ -27308,7 +27332,7 @@ var render = function() {
                 "div",
                 {
                   key: "img-" + idx,
-                  staticClass: "w-100 glow-animation",
+                  staticClass: "w-100 glow-animation lg:object-fill",
                   class: {
                     glow: _vm.shownClass["ar-" + page.id],
                     "fill-width": !_vm.shownClass["ar-" + page.id]
@@ -27328,8 +27352,11 @@ var render = function() {
                 ],
                 1
               )
-            : _c("div", { key: "img-" + idx }, [
-                _c("img", { attrs: { src: page.image_url } })
+            : _c("div", { key: "img-" + idx, staticClass: "lg:object-fill" }, [
+                _c("img", {
+                  staticClass: "lg:object-fill",
+                  attrs: { src: page.image_url }
+                })
               ])
         ]
       }),
@@ -27434,166 +27461,195 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "px-5 py-5" }, [
     _c("div", { staticClass: "bg-white rounded-lg h-full" }, [
-      _c("div", { staticClass: "text-center font-bold text-xl pt-4" }, [
-        _vm._v("\n            Transaction Details\n        ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "text-base px-3 mt-4 divide-y divide-black pb-4" },
-        [
-          _c(
-            "div",
-            { staticClass: "mb-3" },
-            [
-              _vm._l(_vm.cartItems, function(item, idx) {
-                return _vm._l(item.chapters, function(cpt, idxCpt) {
-                  return _c(
-                    "div",
-                    { key: "cart-" + idx + "-" + idxCpt, staticClass: "mb-2" },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(item.title) +
-                          " Ep. " +
-                          _vm._s(cpt) +
-                          "\n                        "
-                      ),
-                      _c("div", { staticClass: "float-right" }, [
-                        _vm._v(
-                          "\n                            Rp. " +
-                            _vm._s(item.price.toLocaleString("id-ID")) +
-                            "\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.arSelected[item.id + "-" + cpt],
-                              expression: "arSelected[item.id + '-' + cpt]"
-                            }
-                          ],
-                          staticClass: "ml-3 text-sm",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.arSelected,
-                                item.id + "-" + cpt,
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "option",
-                            { staticClass: "text-sm", attrs: { selected: "" } },
-                            [_vm._v("No Ar")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "option",
-                            {
-                              staticClass: "text-sm",
-                              domProps: { value: item.id + "-" + cpt }
-                            },
-                            [_vm._v("Ar")]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                })
-              })
-            ],
-            2
-          ),
-          _vm._v(" "),
-          _c("div", [
-            _vm._v("\n                Total Items\n                "),
-            _c("div", { staticClass: "float-right" }, [
-              _vm._v(
-                "\n                    Rp. " +
-                  _vm._s(_vm.total.toLocaleString("id-ID")) +
-                  "\n                "
-              )
-            ])
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-5" }, [
+      _c("div", { staticClass: "lg:px-5 lg:py-5" }, [
         _c(
           "div",
           {
             staticClass:
-              "block uppercase text-gray-500 text-xs font-bold mb-2 mt-3"
+              "text-base px-3 mt-4 divide-y divide-black pb-4 lg:bg-gray-300 lg:rounded-lg"
           },
-          [_vm._v("\n                Choose Your Payment\n            ")]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "inline-block relative w-28" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-            },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "fill-current h-4 w-4",
-                  attrs: {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 20 20"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                    }
-                  })
-                ]
+          [
+            _c("div", { staticClass: "text-center font-bold text-xl pt-4" }, [
+              _vm._v(
+                "\n                    Transaction Details\n                "
               )
-            ]
-          )
-        ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "mb-3" },
+              [
+                _vm._l(_vm.cartItems, function(item, idx) {
+                  return _vm._l(item.chapters, function(cpt, idxCpt) {
+                    return _c(
+                      "div",
+                      {
+                        key: "cart-" + idx + "-" + idxCpt,
+                        staticClass: "mb-2"
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(item.title) +
+                            " Ep. " +
+                            _vm._s(cpt) +
+                            "\n                            "
+                        ),
+                        _c("div", { staticClass: "float-right" }, [
+                          _vm._v(
+                            "\n                                Rp. " +
+                              _vm._s(item.price.toLocaleString("id-ID")) +
+                              "\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.arSelected[item.id + "-" + cpt],
+                                expression: "arSelected[item.id + '-' + cpt]"
+                              }
+                            ],
+                            staticClass: "ml-3 text-sm",
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.arSelected,
+                                  item.id + "-" + cpt,
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                staticClass: "text-sm",
+                                attrs: { selected: "" }
+                              },
+                              [_vm._v("No Ar")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                staticClass: "text-sm",
+                                domProps: { value: item.id + "-" + cpt }
+                              },
+                              [_vm._v("Ar")]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  })
+                })
+              ],
+              2
+            ),
+            _vm._v(" "),
+            _c("div", [
+              _vm._v("\n                    Total Items\n                    "),
+              _c("div", { staticClass: "float-right" }, [
+                _vm._v(
+                  "\n                        Rp. " +
+                    _vm._s(_vm.total.toLocaleString("id-ID")) +
+                    "\n                    "
+                )
+              ])
+            ])
+          ]
+        )
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "w-full bg-indigo-900 h-16 text-white text-center font-bold rounded-b-lg mt-8"
-        },
-        [
-          _c("div", { staticClass: "py-4", on: { click: _vm.submit } }, [
-            _vm._v("Pay Order")
-          ])
-        ]
-      )
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "lg:px-5 lg:py-5" }, [
+        _c(
+          "div",
+          { staticClass: "lg:bg-gray-300 lg:rounded-lg lg:mb-5 lg:h-40" },
+          [
+            _c("div", { staticClass: "font-bold text-lg text-center py-2" }, [
+              _vm._v("\n                Online Payment\n            ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-5" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "block uppercase text-gray-500 text-xs font-bold mb-2 mt-3"
+                },
+                [
+                  _vm._v(
+                    "\n                    Choose Your Payment\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "inline-block relative w-28" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current h-4 w-4",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "w-full bg-indigo-900 h-16 text-white text-center font-bold rounded-lg mt-8"
+          },
+          [
+            _c("div", { staticClass: "py-4", on: { click: _vm.submit } }, [
+              _vm._v("Pay Order")
+            ])
+          ]
+        )
+      ])
     ])
   ])
 }
@@ -27602,94 +27658,98 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "divide-y mt-5" }, [
-      _c("div", [
-        _c(
-          "div",
-          {
-            staticClass:
-              "block uppercase text-gray-500 text-xs font-bold mb-2 px-4"
-          },
-          [
-            _vm._v(
-              "\n                    CARDHOLDER'S NAME\n                    "
+    return _c("div", { staticClass: "lg:px-5" }, [
+      _c(
+        "div",
+        { staticClass: "divide-y lg:bg-gray-300 lg:rounded-lg lg:h-64" },
+        [
+          _c("div", [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "block uppercase text-gray-500 text-xs font-bold mb-2 px-4 lg:pt-2"
+              },
+              [
+                _vm._v(
+                  "\n                    CARDHOLDER'S NAME\n                    "
+                ),
+                _c("input", {
+                  staticClass:
+                    "mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  attrs: {
+                    id: "name",
+                    type: "text",
+                    placeholder: "Input Your Cardholder Name"
+                  }
+                })
+              ]
             ),
-            _c("input", {
-              staticClass:
-                "mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-              attrs: {
-                id: "name",
-                type: "text",
-                placeholder: "Input Your Cardholder Name"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "block uppercase text-gray-500 text-xs font-bold mb-2 px-4"
-          },
-          [
-            _vm._v("\n                    CARD NUMBER\n                    "),
-            _c("input", {
-              staticClass:
-                "mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-              attrs: {
-                id: "number",
-                type: "text",
-                placeholder: "Input Your Card Number"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "font-bold px-4 mt-5 text-xs" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "float-right block uppercase text-gray-500 text-xs font-bold mb-2"
-            },
-            [
-              _c("div", [_vm._v("CVC/CVV")]),
-              _vm._v(" "),
-              _c("input", {
+            _vm._v(" "),
+            _c(
+              "div",
+              {
                 staticClass:
-                  "mt-2 shadow appearance-none border rounded w-20 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-                attrs: { id: "cvv", type: "text", placeholder: "CVC/CVV" }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "block uppercase text-gray-500 text-xs font-bold mb-5"
-            },
-            [
-              _c("div", [_vm._v("EXP DATE")]),
+                  "block uppercase text-gray-500 text-xs font-bold mb-2 px-4"
+              },
+              [
+                _vm._v(
+                  "\n                    CARD NUMBER\n                    "
+                ),
+                _c("input", {
+                  staticClass:
+                    "mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  attrs: {
+                    id: "number",
+                    type: "text",
+                    placeholder: "Input Your Card Number"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "font-bold px-4 mt-5 text-xs" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "float-right block uppercase text-gray-500 text-xs font-bold mb-2"
+                },
+                [
+                  _c("div", [_vm._v("CVC/CVV")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass:
+                      "mt-2 shadow appearance-none border rounded w-20 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                    attrs: { id: "cvv", type: "text", placeholder: "CVC/CVV" }
+                  })
+                ]
+              ),
               _vm._v(" "),
-              _c("input", {
-                staticClass:
-                  "mt-2 shadow appearance-none border rounded w-28 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-                attrs: {
-                  id: "exp_date",
-                  type: "text",
-                  placeholder: "Exp Card Date"
-                }
-              })
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "font-bold text-lg text-center py-2" }, [
-        _vm._v("\n                Online Payment\n            ")
-      ])
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "block uppercase text-gray-500 text-xs font-bold mb-5"
+                },
+                [
+                  _c("div", [_vm._v("EXP DATE")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass:
+                      "mt-2 shadow appearance-none border rounded w-28 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                    attrs: {
+                      id: "exp_date",
+                      type: "text",
+                      placeholder: "Exp Card Date"
+                    }
+                  })
+                ]
+              )
+            ])
+          ])
+        ]
+      )
     ])
   },
   function() {
@@ -27757,7 +27817,9 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [_vm._v("Consent")]),
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
+          _vm._v("Consent")
+        ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
@@ -27765,7 +27827,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("Information we collect")
         ]),
         _vm._v(" "),
@@ -27787,7 +27849,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("How we use your information")
         ]),
         _vm._v(" "),
@@ -27799,7 +27861,9 @@ var render = function() {
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [_vm._v("Log Files")]),
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
+          _vm._v("Log Files")
+        ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
@@ -27807,7 +27871,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("Cookies and Web Beacons")
         ]),
         _vm._v(" "),
@@ -27819,7 +27883,7 @@ var render = function() {
         _vm._v(" "),
         _vm._m(2),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("Our Advertising Partners")
         ]),
         _vm._v(" "),
@@ -27831,7 +27895,7 @@ var render = function() {
         _vm._v(" "),
         _vm._m(3),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("Advertising Partners Privacy Policies")
         ]),
         _vm._v(" "),
@@ -27853,7 +27917,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("Third Party Privacy Policies")
         ]),
         _vm._v(" "),
@@ -27869,7 +27933,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("CCPA Privacy Rights (Do Not Sell My Personal Information)")
         ]),
         _vm._v(" "),
@@ -27879,31 +27943,9 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers."
-          )
-        ]),
+        _vm._m(4),
         _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Request that a business delete any personal data about the consumer that a business has collected."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Request that a business that sells a consumer's personal data, not sell the consumer's personal data."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h2", { staticClass: "font-bold text-2xl" }, [
+        _c("h2", { staticClass: "font-bold text-2xl lg:mt-5" }, [
           _vm._v("GDPR Data Protection Rights")
         ]),
         _vm._v(" "),
@@ -27913,47 +27955,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to erasure – You have the right to request that we erase your personal data, under certain conditions."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us."
-          )
-        ]),
+        _vm._m(5),
         _vm._v(" "),
         _c("h2", [_vm._v("Children's Information")]),
         _vm._v(" "),
@@ -27996,7 +27998,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", [
+    return _c("ul", { staticClass: "lg:list-disc lg:ml-10" }, [
       _c("li", [_vm._v("Provide, operate, and maintain our website")]),
       _vm._v(" "),
       _c("li", [_vm._v("Improve, personalize, and expand our website")]),
@@ -28047,6 +28049,84 @@ var staticRenderFns = [
             [_vm._v("https://policies.google.com/technologies/ads")]
           )
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "lg:list-disc lg:ml-10" }, [
+      _c("li", [
+        _vm._v(
+          "Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Request that a business delete any personal data about the consumer that a business has collected."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Request that a business that sells a consumer's personal data, not sell the consumer's personal data."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us."
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "lg:list-disc lg:ml-10" }, [
+      _c("li", [
+        _vm._v(
+          "The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "The right to erasure – You have the right to request that we erase your personal data, under certain conditions."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us."
+        )
       ])
     ])
   }

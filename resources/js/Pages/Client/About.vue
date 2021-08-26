@@ -14,7 +14,7 @@
         </div>
         <div>
             <div>
-                <div class="flex mt-7 ml-20">
+                <div class="flex mt-7 ml-20 lg:object-center lg:px-96">
                     <div>
                         <img class="w-24 h-24 rounded-full" src="/storage/media/covers/kara.jpg" />
                         <div class="mt-3">CEO Of Visi8</div>
@@ -36,13 +36,13 @@
         <div>
             <div class="text-2xl text-center text-white py-3">WHAT WE DO</div>
             <div class="mb-7">
-                <div class="grid grid-cols-3 divide-x divide-green-500">
-                    <div class="ml-5">AR and 3D Design</div>
+                <div class="grid grid-cols-3 divide-x divide-green-500 lg:mt-10">
+                    <div class="ml-5 lg:ml-52">AR and 3D Design</div>
                     <div>
-                        <div class="ml-10">WEB and APPS</div>
+                        <div class="ml-10 lg:ml-52">Web and Apps</div>
                     </div>
                     <div>
-                        <div class="ml-7">Animation Movie</div>
+                        <div class="ml-7 lg:ml-52">Animation Movie</div>
                     </div>
                 </div>
             </div>

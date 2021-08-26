@@ -1,28 +1,30 @@
 <template>
     <div class="px-5 py-5">
         <div class="bg-white rounded-lg h-full">
-            <div class="text-center font-bold text-xl pt-4">
-                Transaction Details
-            </div>
-            <div class="text-base px-3 mt-4 divide-y divide-black pb-4">
-                <div class="mb-3">
-                    <template v-for="(item, idx) in cartItems">
-                        <div v-for="(cpt, idxCpt) in item.chapters" :key="'cart-' + idx + '-' + idxCpt" class="mb-2">
-                            {{item.title}} Ep. {{cpt}}
-                            <div class="float-right">
-                                Rp. {{(item.price).toLocaleString('id-ID')}}
+            <div class="lg:px-5 lg:py-5">
+                <div class="text-base px-3 mt-4 divide-y divide-black pb-4 lg:bg-gray-300 lg:rounded-lg">
+                    <div class="text-center font-bold text-xl pt-4">
+                        Transaction Details
+                    </div>
+                    <div class="mb-3">
+                        <template v-for="(item, idx) in cartItems">
+                            <div v-for="(cpt, idxCpt) in item.chapters" :key="'cart-' + idx + '-' + idxCpt" class="mb-2">
+                                {{item.title}} Ep. {{cpt}}
+                                <div class="float-right">
+                                    Rp. {{(item.price).toLocaleString('id-ID')}}
+                                </div>
+                                <select class="ml-3 text-sm" v-model="arSelected[item.id + '-' + cpt]">
+                                    <option class="text-sm" selected>No Ar</option>
+                                    <option class="text-sm" :value="item.id + '-' + cpt">Ar</option>
+                                </select>
                             </div>
-                            <select class="ml-3 text-sm" v-model="arSelected[item.id + '-' + cpt]">
-                                <option class="text-sm" selected>No Ar</option>
-                                <option class="text-sm" :value="item.id + '-' + cpt">Ar</option>
-                            </select>
+                        </template>
+                    </div>
+                    <div>
+                        Total Items
+                        <div class="float-right">
+                            Rp. {{(total).toLocaleString('id-ID')}}
                         </div>
-                    </template>
-                </div>
-                <div>
-                    Total Items
-                    <div class="float-right">
-                        Rp. {{(total).toLocaleString('id-ID')}}
                     </div>
                 </div>
             </div>
@@ -34,9 +36,10 @@
             <input type="checkbox" v-model="arSelected[item.id + '-' + cpt]" :value="item.id + '-' + cpt"> Buy AR
         </div>
     </template> -->
-            <div class="divide-y mt-5">
+        <div class="lg:px-5">
+            <div class="divide-y lg:bg-gray-300 lg:rounded-lg lg:h-64">
                 <div>
-                    <div class="block uppercase text-gray-500 text-xs font-bold mb-2 px-4">
+                    <div class="block uppercase text-gray-500 text-xs font-bold mb-2 px-4 lg:pt-2">
                         CARDHOLDER'S NAME
                         <input class="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Input Your Cardholder Name">
                     </div>
@@ -56,28 +59,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="lg:px-5 lg:py-5">
+            <div class="lg:bg-gray-300 lg:rounded-lg lg:mb-5 lg:h-40">
                 <div class="font-bold text-lg text-center py-2">
                     Online Payment
                 </div>
-            </div>
-            <div class="px-5">
-                <div class="block uppercase text-gray-500 text-xs font-bold mb-2 mt-3">
-                    Choose Your Payment
-                </div>
-                <div class="inline-block relative w-28">
-                    <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                        <option>OVO</option>
-                        <option>GO-PAY</option>
-                        <option>DANA</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                <div class="px-5">
+                    <div class="block uppercase text-gray-500 text-xs font-bold mb-2 mt-3">
+                        Choose Your Payment
+                    </div>
+                    <div class="inline-block relative w-28">
+                        <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option>OVO</option>
+                            <option>GO-PAY</option>
+                            <option>DANA</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="w-full bg-indigo-900 h-16 text-white text-center font-bold rounded-b-lg mt-8">
+            <div class="w-full bg-indigo-900 h-16 text-white text-center font-bold rounded-lg mt-8">
                 <div class="py-4" @click="submit">Pay Order</div>
             </div>
+        </div>
         </div>
        
         <!-- <div>Choose Method:</div>
