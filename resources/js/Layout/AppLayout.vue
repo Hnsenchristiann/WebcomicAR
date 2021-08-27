@@ -24,7 +24,7 @@
                         <div class="hidden lg:block">
                             <div class="ml-5">
                                 <router-link :to="{name: 'dashboard'}">Dashboard</router-link>
-                                <router-link class="ml-5" :to="{}">My Contact</router-link>
+                                <router-link class="ml-5" :to="{}">My Comic</router-link>
                                 <router-link class="ml-5" :to="{}">My Account</router-link>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                     <div class="px-2 pt-2 pb-3 space-y-1">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <router-link @click.native="mobileMenuOpen = false" :to="{name: 'dashboard'}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</router-link>
-                        <router-link :to="{}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Comics</router-link>
+                        <router-link :to="{name: 'mycomic'}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Comics</router-link>
                         <router-link :to="{}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Account</router-link>
                     </div>
                 </div>
@@ -100,9 +100,9 @@
                 </div>
             </div>
         </div>
-        <div class="hidden md:block">
+        <div class="lg:block">
             <div class="bg-gray-800 h-full">
-                <div class="flex ml-80 mt-10">
+                <div class="flex items-center justify-center mt-10">
                     <div class="divide-x">
                         <router-link class="mr-5" :to="{name: 'about'}">About Us</router-link>
                         <router-link class="px-5" :to="{name: 'about'}">My Account</router-link>

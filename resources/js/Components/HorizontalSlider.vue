@@ -1,6 +1,6 @@
 <template>
     <div class="scrolling-wrapper">
-        <div v-for="(item, idx) in items.items" class="w-12 card scroller-container mr-1 bg-gradient-to-t from-indigo-900 to-indigo-400" :key="'item-' + idx">
+        <div v-for="(item, idx) in items.items" class="w-12 card scroller-container mr-1 lg:mr-2 bg-gradient-to-t from-indigo-900 to-indigo-400" :key="'item-' + idx">
             <!-- <div>
                 <router-link :to="item.url">
                     <img :src="item[config.image]" class="image">
@@ -70,6 +70,8 @@ export default {
 .image{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 80px;
     max-width: 100%;
 }

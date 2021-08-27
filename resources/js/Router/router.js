@@ -8,6 +8,7 @@ import PaymentShow from '../Pages/Client/PaymentShow.vue'
 import Login from '../Pages/Client/Login.vue'
 import Account from '../Pages/Client/Account.vue'
 import Privacy from '../Pages/Client/Privacy.vue'
+import MyComic from '../Pages/Client/MyComic.vue'
 import Register from '../Pages/Client/Register.vue'
 import Logout from '../Pages/Client/Logout.vue'
 import Search from '../Pages/Client/Search.vue'
@@ -85,6 +86,14 @@ const routes = [
                 path: '/payment',
                 component: PaymentShow,
                 name: 'paymentShow',
+                meta: {
+                    requiresAuth: true
+                }
+            },
+            {
+                path: '/mycomic',
+                component: MyComic,
+                name: 'mycomic',
                 meta: {
                     requiresAuth: true
                 }
