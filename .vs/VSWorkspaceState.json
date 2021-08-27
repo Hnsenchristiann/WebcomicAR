@@ -11,6 +11,6 @@
     "\\resources\\js\\Pages\\Client",
     "\\resources\\js\\Router"
   ],
-  "SelectedNode": "\\resources\\js\\Router\\router.js",
+  "SelectedNode": "\\resources\\js\\Pages\\Client\\PageShow.vue",
   "PreviewInSolutionExplorer": false
 }

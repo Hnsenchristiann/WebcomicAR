@@ -2308,6 +2308,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'app-layout',
   methods: {
@@ -25249,7 +25279,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                      "absolute ml-12 inset-y-0 left-0 flex items-center sm:hidden"
                   },
                   [
                     _c(
@@ -25276,7 +25306,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "block h-6 w-6",
+                            staticClass: "block h-6 w-6 lg:hidden",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -25337,7 +25367,7 @@ var render = function() {
                       { staticClass: "flex-shrink-0 flex items-center" },
                       [
                         _c("img", {
-                          staticClass: "block lg:hidden h-16 w-auto",
+                          staticClass: "block h-16 w-auto",
                           attrs: { src: _vm.visi8Icon.default, alt: "Workflow" }
                         }),
                         _vm._v(" "),
@@ -25351,6 +25381,33 @@ var render = function() {
                         })
                       ]
                     ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "hidden lg:block" }, [
+                      _c(
+                        "div",
+                        { staticClass: "ml-5" },
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: { name: "dashboard" } } },
+                            [_vm._v("Dashboard")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            { staticClass: "ml-5", attrs: { to: {} } },
+                            [_vm._v("My Contact")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            { staticClass: "ml-5", attrs: { to: {} } },
+                            [_vm._v("My Account")]
+                          )
+                        ],
+                        1
+                      )
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
                       _c(
@@ -25609,52 +25666,118 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "w-100 bg-gray-800 divide-y text-center h-full" },
-        [
-          _c(
-            "div",
-            { staticClass: "h-12 py-2" },
-            [
-              _c("router-link", { attrs: { to: { name: "about" } } }, [
-                _vm._v("About Us")
-              ])
-            ],
-            1
-          ),
+      _c("div", { staticClass: "lg:hidden" }, [
+        _c(
+          "div",
+          { staticClass: "w-100 bg-gray-800 divide-y text-center h-full" },
+          [
+            _c(
+              "div",
+              { staticClass: "h-12 py-2" },
+              [
+                _c("router-link", { attrs: { to: { name: "about" } } }, [
+                  _vm._v("About Us")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "h-12 py-2" },
+              [
+                _c("router-link", { attrs: { to: { name: "myaccount" } } }, [
+                  _vm._v("My Account")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "h-12 py-2" },
+              [
+                _c("router-link", { attrs: { to: { name: "privacy" } } }, [
+                  _vm._v("Privacy Policy")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "h-12 py-2" },
+              [_c("router-link", { attrs: { to: {} } }, [_vm._v("FAQ")])],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "py-2" }, [
+              _vm._v("\n                Follow Us On\n                "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "flex w-full flex flex-row items-center justify-center mt-2"
+                },
+                [
+                  _c("img", {
+                    staticClass: "w-12",
+                    attrs: { src: _vm.facebookIcon.default }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "w-12",
+                    attrs: { src: _vm.instagramIcon.default }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "w-12",
+                    attrs: { src: _vm.twitterIcon.default }
+                  })
+                ]
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "hidden md:block" }, [
+        _c("div", { staticClass: "bg-gray-800 h-full" }, [
+          _c("div", { staticClass: "flex ml-80 mt-10" }, [
+            _c(
+              "div",
+              { staticClass: "divide-x" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "mr-5", attrs: { to: { name: "about" } } },
+                  [_vm._v("About Us")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  { staticClass: "px-5", attrs: { to: { name: "about" } } },
+                  [_vm._v("My Account")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  { staticClass: "px-5", attrs: { to: { name: "privacy" } } },
+                  [_vm._v("Privacy Policy")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  { staticClass: "px-5", attrs: { to: { name: "about" } } },
+                  [_vm._v("FAQ")]
+                )
+              ],
+              1
+            )
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "h-12 py-2" },
-            [
-              _c("router-link", { attrs: { to: { name: "myaccount" } } }, [
-                _vm._v("My Account")
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "h-12 py-2" },
-            [
-              _c("router-link", { attrs: { to: { name: "privacy" } } }, [
-                _vm._v("Privacy Policy")
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "h-12 py-2" },
-            [_c("router-link", { attrs: { to: {} } }, [_vm._v("FAQ")])],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "py-2" }, [
-            _vm._v("\n            Follow Us On\n            "),
+          _c("div", { staticClass: "py-5 text-center" }, [
+            _vm._v("\n                Follow Us On\n                "),
             _c(
               "div",
               {
@@ -25679,8 +25802,8 @@ var render = function() {
               ]
             )
           ])
-        ]
-      )
+        ])
+      ])
     ]
   )
 }
@@ -26644,7 +26767,7 @@ var render = function() {
               staticClass: "flex flex-row h-20 bg-indigo-800 text-white"
             },
             [
-              _c("div", { staticClass: "flex-none w-1/5" }, [
+              _c("div", { staticClass: "flex-none w-1/5 lg:w-24" }, [
                 _c("img", {
                   staticClass: "h-20",
                   attrs: { src: preview.image_url, alt: "" }
@@ -26700,10 +26823,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                {
-                  staticClass:
-                    "w-2/5 flex justify-center items-center  lg:justify-end lg:items-end"
-                },
+                { staticClass: "w-2/5 flex justify-end items-end mb-7 mr-5" },
                 [
                   !_vm.$_.includes(_vm.purchaseObj.chapters, preview.chapter)
                     ? _c(
@@ -26817,17 +26937,17 @@ var render = function() {
                   },
                   [
                     _c("img", {
-                      staticClass: "h-1/2 rounded-lg",
+                      staticClass: "h-1/2 rounded-lg lg:h-96 lg:w-full",
                       attrs: { src: _vm.comic.cover_url }
                     }),
                     _vm._v(" "),
-                    _c("div", [
+                    _c("div", { staticClass: "lg:p-2" }, [
                       _vm._v(
                         "Rp. " + _vm._s(_vm.comic.price.toLocaleString("id-ID"))
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", [
+                    _c("div", { staticClass: "lg:p-2" }, [
                       _vm._v(
                         "Apakah kamu mau membeli Ep. " +
                           _vm._s(_vm.episodeModal) +
@@ -27274,7 +27394,7 @@ var render = function() {
     "div",
     { staticClass: "w-full" },
     [
-      _c("div", { staticClass: "w-full mt-1 mb-2 px-5 py-2" }, [
+      _c("div", { staticClass: "w-full mt-1 mb-2 px-5 py-2 text-center" }, [
         _c("label", { staticClass: "text-white", attrs: { for: "chapter" } }, [
           _vm._v("Select chapter")
         ]),
@@ -27332,7 +27452,7 @@ var render = function() {
                 "div",
                 {
                   key: "img-" + idx,
-                  staticClass: "w-100 glow-animation lg:object-fill",
+                  staticClass: "w-100 glow-animation",
                   class: {
                     glow: _vm.shownClass["ar-" + page.id],
                     "fill-width": !_vm.shownClass["ar-" + page.id]
@@ -27347,14 +27467,19 @@ var render = function() {
                         to: { name: "sceneShow", params: { pageId: page.id } }
                       }
                     },
-                    [_c("img", { attrs: { src: page.image_url } })]
+                    [
+                      _c("img", {
+                        staticClass: "lg:object-fill lg:w-full",
+                        attrs: { src: page.image_url }
+                      })
+                    ]
                   )
                 ],
                 1
               )
-            : _c("div", { key: "img-" + idx, staticClass: "lg:object-fill" }, [
+            : _c("div", { key: "img-" + idx }, [
                 _c("img", {
-                  staticClass: "lg:object-fill",
+                  staticClass: "lg:object-fill lg:w-full",
                   attrs: { src: page.image_url }
                 })
               ])

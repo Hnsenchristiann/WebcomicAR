@@ -27,7 +27,7 @@
         </div>
         <div class="divide-y divide-black">
             <div class="flex flex-row h-20 bg-indigo-800 text-white" v-for="(preview, idx) in previews" :key="'preview-'+idx">
-                <div class="flex-none w-1/5">
+                <div class="flex-none w-1/5 lg:w-24">
                     <img class="h-20" :src="preview.image_url" alt="">
                 </div>
                 <div class="flex-grow flex flex-col p-3 w-2/5 lg:w-2" @click="goToChapter(preview.chapter)">
@@ -41,7 +41,7 @@
                         <div class="text-xs">{{preview.release_date}}</div>
                     </div>
                 </div>
-                <div class="w-2/5 flex justify-center items-center  lg:justify-end lg:items-end" >
+                <div class="w-2/5 flex justify-end items-end mb-7 mr-5" >
                     <button v-if="!$_.includes(purchaseObj.chapters, preview.chapter)" class="text-xs items-center min-h-8 w-116  p-2 rounded-lg text-gray-50 bg-green-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="openModal(preview.chapter)">Buy Ep. {{preview.chapter}}</button>
                     <template v-else>
                         <button class="text-xs items-center h-auto w-116  p-2 rounded-lg text-gray-50 bg-green-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="goToChapter(preview.chapter, true)">Read Ep. {{preview.chapter}} With AR</button>
@@ -71,9 +71,9 @@
         <modal v-model="modal">
             <template v-slot:body>
                 <div class="p-6 flex flex-col content-center justify-center">
-                    <img :src="comic.cover_url" class="h-1/2 rounded-lg">
-                    <div>Rp. {{(comic.price).toLocaleString('id-ID')}}</div>
-                    <div>Apakah kamu mau membeli Ep. {{episodeModal}}?</div>
+                    <img :src="comic.cover_url" class="h-1/2 rounded-lg lg:h-96 lg:w-full" />
+                    <div class="lg:p-2">Rp. {{(comic.price).toLocaleString('id-ID')}}</div>
+                    <div class="lg:p-2">Apakah kamu mau membeli Ep. {{episodeModal}}?</div>
                 </div>
             </template>
             <template v-slot:footer>
