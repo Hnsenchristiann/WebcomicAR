@@ -6,11 +6,12 @@
     "\\app\\Http\\Middleware",
     "\\resources",
     "\\resources\\js",
+    "\\resources\\js\\Components",
     "\\resources\\js\\Layout",
     "\\resources\\js\\Pages",
     "\\resources\\js\\Pages\\Client",
     "\\resources\\js\\Router"
   ],
-  "SelectedNode": "\\resources\\js\\Pages\\Client\\PageShow.vue",
+  "SelectedNode": "\\resources\\js\\Pages\\Client\\PaymentShow.vue",
   "PreviewInSolutionExplorer": false
 }

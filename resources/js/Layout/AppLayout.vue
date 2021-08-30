@@ -69,7 +69,7 @@
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <router-link @click.native="mobileMenuOpen = false" :to="{name: 'dashboard'}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</router-link>
                         <router-link :to="{name: 'mycomic'}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Comics</router-link>
-                        <router-link :to="{}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Account</router-link>
+                        <router-link :to="{name : 'myaccount'}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Account</router-link>
                     </div>
                 </div>
             </transition>
@@ -84,7 +84,7 @@
                 <router-view :key="$route.fullPath"></router-view>
             </div>
         </div>
-        <div class="lg:hidden">
+        <div class="md:hidden">
             <div class="w-100 bg-gray-800 divide-y text-center h-full">
                 <div class="h-12 py-2"><router-link :to="{name: 'about'}">About Us</router-link></div>
                 <div class="h-12 py-2"><router-link :to="{name: 'myaccount'}">My Account</router-link></div>
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div class="lg:block">
+        <div class="hidden md:block">
             <div class="bg-gray-800 h-full">
                 <div class="flex items-center justify-center mt-10">
                     <div class="divide-x">

@@ -25864,7 +25864,7 @@ var render = function() {
                           {
                             staticClass:
                               "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium",
-                            attrs: { to: {} }
+                            attrs: { to: { name: "myaccount" } }
                           },
                           [_vm._v("My Account")]
                         )
@@ -25891,7 +25891,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "lg:hidden" }, [
+      _c("div", { staticClass: "md:hidden" }, [
         _c(
           "div",
           { staticClass: "w-100 bg-gray-800 divide-y text-center h-full" },
@@ -25966,7 +25966,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "lg:block" }, [
+      _c("div", { staticClass: "hidden md:block" }, [
         _c("div", { staticClass: "bg-gray-800 h-full" }, [
           _c("div", { staticClass: "flex items-center justify-center mt-10" }, [
             _c(
@@ -26647,52 +26647,266 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-5" }, [
-      _c("div", { staticClass: "bg-white w-full h-full rounded" }, [
-        _c("div", { staticClass: "text-lg px-5" }, [
-          _vm._v("Data Information")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "px-3" }, [
-          _c(
-            "div",
-            { staticClass: "text-base px-3 mt-4 pb-4 bg-gray-300 rounded-lg" },
-            [
-              _c("form", { staticClass: "w-64 ml-10" }, [
-                _c("div", { staticClass: "pt-5" }, [_vm._v("Username")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "border-b border-teal-500" }, [
-                  _c("input", {
-                    staticClass:
-                      "appearance-none bg-transparent border-none text-gray-700 leading-tight focus:outline-none",
-                    attrs: { type: "text", "aria-label": "username" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "pt-2" }, [_vm._v("Password")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "border-b border-teal-500" }, [
-                  _c("input", {
-                    staticClass:
-                      "appearance-none bg-transparent border-none text-gray-700 leading-tight focus:outline-none",
-                    attrs: { type: "text", "aria-label": "password" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "pt-2" }, [
-                  _vm._v("Confirm Password")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "border-b border-teal-500" }, [
-                  _c("input", {
-                    staticClass:
-                      "appearance-none bg-transparent border-none text-gray-700 leading-tight focus:outline-none",
-                    attrs: { type: "text", "aria-label": "confirm" }
-                  })
+    return _c("div", [
+      _c("div", { staticClass: "bg-white h-full w-full" }, [
+        _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+          _c("div", { staticClass: "md:col-span-1" }, [
+            _c(
+              "div",
+              { staticClass: "font-bold text-xl px-3 pt-3 lg:px-5 lg:pt-5" },
+              [_vm._v("Profile Information")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3 lg:px-5" }, [
+              _vm._v(
+                "Update Your Account's Profile Information and Email Address"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "md:col-span-2" }, [
+            _c("form", [
+              _c("div", { staticClass: "p-3" }, [
+                _c("div", { staticClass: "bg-white rounded border-2" }, [
+                  _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
+                    _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+                      _c("div", { staticClass: "text-xl p-3 lg:p-5" }, [
+                        _vm._v("Profile Photo")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "px-3" }, [
+                        _c(
+                          "button",
+                          { staticClass: "font-bold px-3 border-2 rounded" },
+                          [_vm._v("Select Profile Picture")]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "username" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Username\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Username"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "email" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Email\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Email"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "fullname" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Fullname\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Fullname"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex justify-end px-5 py-5" }, [
+                    _c(
+                      "button",
+                      { staticClass: "bg-blue-500 rounded w-14 h-7" },
+                      [_vm._v("Save")]
+                    )
+                  ])
                 ])
               ])
-            ]
-          )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "md:col-span-1" }, [
+            _c(
+              "div",
+              { staticClass: "font-bold text-xl px-3 pt-3 lg:px-5 lg:pt-5" },
+              [_vm._v("Update Password")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3 lg:px-5" }, [
+              _vm._v(
+                "Ensure Your Password is using a long, random password to stay secure"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "md:col-span-2" }, [
+            _c("form", [
+              _c("div", { staticClass: "p-3" }, [
+                _c("div", { staticClass: "bg-white rounded border-2" }, [
+                  _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "cureent-password" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Current Password\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Username"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "new-password" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        New Password\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Password"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "px-3 mt-5 col-span-6 sm:col-span-4" },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-gray-700 text-sm font-bold mb-2",
+                            attrs: { for: "confirm-password" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Confirm Password\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                          attrs: {
+                            id: "username",
+                            type: "text",
+                            placeholder: "Fullname"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex justify-end px-5 py-5" }, [
+                    _c(
+                      "button",
+                      { staticClass: "bg-blue-500 rounded w-14 h-7" },
+                      [_vm._v("Save")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
         ])
       ])
     ])
